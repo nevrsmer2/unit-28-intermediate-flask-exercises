@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %} {{ pet.name }} the {{ pet.species }}{% endblock %}
+
+{% block body %}
+
+<h1>View and Edit {{ pet.name}}'s' Profile</h1>
+
+<h3>{{ pet.name}}'s Profile </h3>
+
+<div class="pet-img1">
+    {% if pet.photo_url %}
+    <img class="pet-image2" src="{{ pet.photo_url }}" alt="Photo of {{ pet.name }} the {{ pet.species }}">
+    {% endif %}
+    <p>I'm {{ pet.name }} the {{ pet.species }}. I'm only {{ pet.age }}. I need a forever home.</p>
+</div>
+
+
+<h1>Edit {{ pet.name }}'s Profile</h1>
+
+<form>
+    {% include "pets/_form.html" %}
+    <button type="submit">Edit</button>
+</form>
+
+{% endblock %}

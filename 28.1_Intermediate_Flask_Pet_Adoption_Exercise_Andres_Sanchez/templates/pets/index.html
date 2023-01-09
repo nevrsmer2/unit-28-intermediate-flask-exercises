@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %} Pets for Adoption{% endblock %}
+
+{% block body %}
+
+<h1>Pets Looking for a a Forevor Home</h1>
+
+<div>
+    {% for pet in pets %}
+    <div class="pet-container">
+        <a href="/pets/{{ pet.id }}"><img class="pet-image" src="{{ pet.photo_url }}" alt="My name is {{ pet.name }}" the {{pet.species }}></a>
+        <p>I'm {{ pet.name }}.{% if pet.available %} <b>Available!</b> {% else %} Available Soon.{% endif %}
+    </div>
+    {% endfor %}
+</div>
+
+<div>
+    <form>
+        <button formaction="/pets/add" formmethod="GET">Add Pet</button>
+    </form>
+</div>
+
+{% endblock %}
