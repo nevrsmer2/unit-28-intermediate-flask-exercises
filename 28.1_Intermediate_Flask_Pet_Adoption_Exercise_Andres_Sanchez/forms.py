@@ -29,8 +29,10 @@ class EditPetForm(FlaskForm):
 
     notes = TextAreaField('Notes')
 
-    available = BooleanField(
-        validators=[InputRequired(message='Enter True or False.')])
+    # available = BooleanField(
+    #     validators=[InputRequired(message='Enter True or False.')])
+
+    available = BooleanField("Available?")
 
     # available = BooleanField(default field arguments, false_values=None)
     # https://code.luasoftware.com/tutorials/python/wtforms-booleanfield-value-and-validation

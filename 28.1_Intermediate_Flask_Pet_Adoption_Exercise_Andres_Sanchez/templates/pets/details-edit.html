@@ -17,8 +17,8 @@
 
 
 <h1>Edit {{ pet.name }}'s Profile</h1>
-
-<form>
+<p>After updating any details, click Edit to save.</p>
+<form method="POST">
     {% include "pets/_form.html" %}
     <button type="submit">Edit</button>
 </form>

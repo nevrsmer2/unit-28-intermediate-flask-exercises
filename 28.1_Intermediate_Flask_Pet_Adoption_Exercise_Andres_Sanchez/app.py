@@ -67,9 +67,9 @@ def show_edit_pet_details(pid):
     form = EditPetForm(obj=pet)
 
     if form.validate_on_submit():
-        photo_url = form.photo_url.data
-        notes = form.notes.data
-        available = form.available.data
+        pet.photo_url = form.photo_url.data
+        pet.notes = form.notes.data
+        pet.available = form.available.data
 
         db.session.commit()
         return redirect('/')
