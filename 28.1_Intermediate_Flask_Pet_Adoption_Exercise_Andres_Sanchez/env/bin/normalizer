@@ -1,0 +1,8 @@
+#!/Users/panilo/Documents/A_USF_Bootcamp/Z_Unit_and_Subunit_Exercises/Unit_28_Intermediate_Flask/28.1_Intermediate_Flask_Pet_Adoption_Exercise_Andres_Sanchez/env/bin/python3.11
+# -*- coding: utf-8 -*-
+import re
+import sys
+from charset_normalizer.cli.normalizer import cli_detect
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw|\.exe)?$', '', sys.argv[0])
+    sys.exit(cli_detect())

@@ -20,5 +20,8 @@ p3 = Pet(name='Samantha', species='Ferret', age='2', photo_url='https://thumbs.d
 p4 = Pet(name='Bart', species='Fish', age='5', photo_url='https://cff2.earth.com/uploads/2022/10/13062530/Goldfish-2048x1365.jpg',
          notes='It\'s a godlfish, not a piranha.', available=True)
 
-db.session.add_all([p1, p2, p3, p4])
+p5 = Pet(name='Nick', species='Dog', age='8', photo_url='https://s36700.pcdn.co/wp-content/uploads/2015/05/shutterstock_219143260.jpg',
+         notes='Good dog.', available=True)
+
+db.session.add_all([p1, p2, p3, p4, p5])
 db.session.commit()
